@@ -1,0 +1,160 @@
+/* Configuration of menu width */
+
+html body ul#nav ul, html body ul#nav ul li { width:190px; }
+html body ul#nav ul ul { margin:0 0 0 200px; }
+/* Theming the menu */
+
+ul#nav { float:left; font-size:14px; text-align:left; font-family:calibri, Arial, sans-serif; text-transform:uppercase; }
+ul#nav ul { background:#d9d9d9; margin-top:0px; z-index:1000; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; -webkit- border-radius:0 0 5px 5px;}
+ul#nav ul li { border-top:1px solid #c8c8c8; border-bottom:1px solid #eee; z-index:999; }
+ul#nav li {padding:0; background:url(../images/topnav_sep.gif) right center no-repeat;}
+ul#nav li.last{ background-image:none;}
+ul#nav ul li { background-image:none; padding:0; }
+ul#nav li a { text-decoration:none; color:#333; margin:0; display:block;}
+ul#nav li a span { padding:11px 11px 11px; display:block;}
+ul#nav ul li a { padding:6px 15px; font-size:15px; text-transform:none; color:#333; font-weight:normal; margin:0; }
+ul#nav ul li b{ display:block; padding:7px 20px;}
+ul#nav ul li a:hover { background-color:#aec572;}
+ul#nav li.current li a{ background-image:none; color:#eee;}
+ul#nav li a:hover, ul#nav li a:focus, ul#nav li.current a { color:#6cb01b;}
+ul#nav li.current li a{ }
+ul#nav li li a:hover, ul#nav li li a:focus{ color:#6cb01b; background-color:#403838;}
+ul#nav li a:hover span, ul#nav li a:focus span, ul#nav li.current a span { color:#6cb01b;}
+ul#nav li ul li a:hover { background-image:none; }
+ul#nav span.sf-arrow { top:18px; right:6px; background-image:url(../images/arrows-white.png); }
+ul#nav ul span.sf-arrow { right:12px; top:16px; }
+/* Configuration of menu width */
+
+html body ul.sf-menu ul, html body ul.sf-menu ul li { width:160px; }
+html body ul.sf-menu ul ul { margin:0 0 0 180px; }
+/* Framework for proper showing/hiding/positioning */
+/* DO NOT EDIT FROM HERE */
+ul.sf-menu, ul.sf-menu * { margin:0; padding:0; }
+ul.sf-menu { display:block; position:relative; }
+ul.sf-menu li { display:block; list-style:none; float:left; position:relative; }
+ul.sf-menu li:hover { visibility:inherit; /* fixes IE7 'sticky bug' */ }
+ul.sf-menu a { display:block; position:relative; }
+ul.sf-menu ul { position:absolute; left:0; width:150px; top:auto; left:-999999px; }
+ul.sf-menu ul a { zoom:1; /* IE6/7 fix */ }
+ul.sf-menu ul li { float:left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */ width:150px; }
+ul.sf-menu ul ul { top:0; margin:0 0 0 150px }
+ul.sf-menu li:hover ul, ul.sf-menu li:focus ul, ul.sf-menu li.sf-hover ul { /*first level*/ left:auto; }
+ul.sf-menu li:hover ul ul, ul.sf-menu li:focus ul ul, ul.sf-menu li.sf-hover ul ul { left:-999999px; }
+ul.sf-menu ul li:hover ul, ul.sf-menu ul li:focus ul, ul.sf-menu ul li.sf-hover ul {/*second level*/ left:auto; }
+ul.sf-menu ul li:hover ul ul, ul.sf-menu ul li:focus ul ul, ul.sf-menu ul li.sf-hover ul ul { left:-999999px; }
+ul.sf-menu ul ul li:hover ul, ul.sf-menu ul ul li:focus ul, ul.sf-menu ul ul li.sf-hover ul {/*third level*/ left:auto; }
+ul.sf-menu ul ul li:hover ul ul, ul.sf-menu ul ul li:focus ul ul, ul.sf-menu ul ul li.sf-hover ul ul { left:-999999px; }
+ul.sf-menu ul ul ul li:hover ul, ul.sf-menu ul ul ul li:focus ul, ul.sf-menu ul ul ul li.sf-hover ul {/*fourth level*/ left:auto; }
+ul.sf-menu ul ul ul li:hover ul ul, ul.sf-menu ul ul ul li:focus ul ul, ul.sf-menu ul ul ul li.sf-hover ul ul { left:-999999px; }
+/* autoArrows CSS */
+
+span.sf-arrow { width:7px; height:7px; position:absolute; top:8px; right:0; display:block; background:url(../images/arrows-black.png) no-repeat 0 0; overflow:hidden; /* making sure IE6 doesn't overflow and expand the box */ font-size:1px; }
+ul ul span.sf-arrow { right:12px; top:7px; background-position:0 100%; }
+
+
+/* The Nivo Slider styles */
+.nivoSlider { position:relative; }
+.nivoSlider img { position:absolute; top:0px; left:0px; }
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink { position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:6; display:none; }
+/* The slices and boxes in the Slider */
+.nivo-slice { display:block; position:absolute; z-index:5; height:100%; }
+.nivo-box { display:block; position:absolute; z-index:5;}
+/* Caption styles */
+.nivo-caption { position:absolute; left:0px; bottom:0px; background:#000; color:#fff; opacity:0.8; /* Overridden by captionOpacity setting */ width:100%; z-index:8; }
+.nivo-caption p { padding:5px; margin:0; }
+.nivo-caption a { display:inline !important; }
+.nivo-html-caption { display:none; }
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a { position:absolute; top:45%; z-index:9; cursor:pointer; }
+.nivo-prevNav { left:0px; }
+.nivo-nextNav { right:0px; }
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a { position:relative; z-index:9; cursor:pointer; }
+.nivo-controlNav a.active { font-weight:bold; }
+
+
+/* Slider control Styles */
+#slider { position:relative; background:url(../images/loading.gif) no-repeat 50% 50%; }
+#slider img { position:absolute; top:0px; left:0px; display:none; }
+#slider a { border:0; display:block; }
+.nivo-controlNav { position:absolute; left:517px; bottom:15px; }
+.nivo-controlNav a { display:block; width:20px; height:20px; background:url(../images/bullets.png) no-repeat; text-indent:-9999px; border:0; float:left; }
+.nivo-controlNav a.active { background-position:0 -22px; }
+.nivo-directionNav a { display:block; width:30px; height:30px; background:url(../images/arrows.png) no-repeat; text-indent:-9999px; border:0; }
+a.nivo-nextNav { background-position:-30px 0; right:15px; }
+a.nivo-prevNav { left:15px; }
+.nivo-caption { text-shadow:none; font-family: Helvetica, Arial, sans-serif; }
+.nivo-caption a { color:#efe9d1; text-decoration:underline; }
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear { clear:both; }
+/* Category nav menu Style Start */
+.accordmenu { margin:0; padding: 0; width:100%; }
+.silverheader { background:url(../images/cat_dotline.gif) left bottom repeat-x; }
+.silverheader a:link, .silverheader a:visited { display:block; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#404040; padding:10px 15px; margin-bottom:3px; background:url(../images/left_navbg.gif) left center no-repeat; text-decoration:none; }
+.silverheader a:hover, .accordmenu .selected a { color:#12ae33; background:url(../images/left_navbghov.gif) left center no-repeat; }
+.silverheader span { color:#999; font-size:11px; }
+.accordmenu div.submenu { /*DIV that contains each sub menu*/ background:url(../images/cat_subbg.gif) #f3f2f2 left top repeat-x; }
+.accordmenu div.submenu a:link, .accordmenu div.submenu a:visited { display:block; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#404040; padding:10px 15px 10px 28px; margin-bottom:3px; background:url(../images/left_nav_subbg.gif) left center no-repeat; text-decoration:none; }
+.accordmenu div.submenu a:hover, .accordmenu div.submenu a.selected { color:#d32d2d; background:url(../images/left_nav_subbg_hov.gif) left center no-repeat; }
+.accordmenu div.submenu span { color:#999; font-size:11px; }
+/*Category nav menu Style Ends*/
+
+/*::::: PIROBOX RULES::::::::*/
+.piro_overlay { position: fixed; _position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:#fff; display: none; z-index:99997; }
+.loading span { position:absolute; top:50%; left:50%; margin-top:-15px; margin-left:-15px; width:30px; height:30px; display:block; z-index:100008; background:none }
+.loading span span { position:absolute; display:block; width:30px; height:30px; z-index:100009; background:url(../images/pbox/ajax-loader.gif) center center no-repeat!important; background:url(../images/pbox/ajax-loader.gif) center center no-repeat; }
+.caption { position:absolute; bottom:0; left:0; margin:0; display:block; padding:0px; cursor:text; background:#222; }
+.piro_nav { position:absolute; bottom:0; left:50%; margin:0; display:block; padding:0; background:none; }
+.caption p { display:block; margin:0; padding:4px 28px 4px 38px; text-align:center; font-weight:normal; background:black; color:white; font-size:12px; }
+a.piro_close { position:absolute; top:20px; right:20px; height:35px; width:35px; background:url(../images/pbox/close_btn.png) no-repeat; cursor:pointer; z-index:100006; }
+a:hover.piro_close { background:url(../images/pbox/close_btn_h.png) no-repeat; }
+a.piro_next { position:absolute; top:50%; width:35px; height:35px; right:20px; text-indent:-999em; outline:none; display:block; margin:-18px 0 0 0; background:url(../images/pbox/next.png) center right no-repeat; border:none; cursor:pointer; z-index:1000000001 }
+a:hover.piro_next { background:url(../images/pbox/next_h.png) center right no-repeat; }
+a.piro_prev { position:absolute; top:50%; width:35px; height:35px; left:20px; text-indent:-999em; outline:none; display:block; margin:-18px 0 0 0; background:url(../images/pbox/prev.png) center left no-repeat; border:none; cursor:pointer; z-index:1000000000 }
+a:hover.piro_prev { background:url(../images/pbox/prev_h.png) center left no-repeat; }
+.pirobox_content { position:absolute; top:50%; left: 50%; padding:0; width: 800px; height: 600px; margin:-300px 0 0 -400px; display:block; z-index:99998; font-family:Trebuchet MS, Arial; }
+.pirobox_content table, tbody, tr, th, td { margin:0; padding:0; border:none; }
+.pirobox_content img { margin:0; padding:0; border:none; }
+.t_l { background:url(../images/pbox/t_l.png) no-repeat; width:20px; height:20px; }
+.t_r { background:url(../images/pbox/t_r.png) no-repeat; width:20px; height:20px; }
+.t_c { height:20px; background:url(../images/pbox/t_c.png) repeat-x; }
+.c_l { width:20px; background:url(../images/pbox/c_l.png) repeat-y; }
+.c_c { background:white; margin:0; padding:0; }
+.c_c div { width:760px; height:560px; margin:0; padding:0 0 0px 0; }
+.c_r { width:20px; background:url(../images/pbox/c_r.png) repeat-y; }
+.b_c { height:20px; background:url(../images/pbox/b_c.png) repeat-x; }
+.b_l { background:url(../images/pbox/b_l.png) no-repeat; width:20px; height:20px; }
+.b_r { background:url(../images/pbox/b_r.png) no-repeat; width:20px; height:20px; }
+/*.t_l{background:#000; width:10px; height:10px;}
+.t_r{background:#000; width:10px; height:10px;}
+.t_c{height:10px; background:#000;}
+
+.c_l{width:10px; background:#000;}
+.c_c{background:#000; margin:0; padding:0;}
+.c_c div{width:380px; height:180px; margin:0; padding:0;}
+.c_r{width:10px; background: #000;}
+
+.b_c{height:10px; background:#000;}
+.b_l{background:#000; width:10px; height:10px;}
+.b_r{background:#000; width:10px; height:10px;}
+*/
+.box_img { position:absolute; z-index:99995; background:url(../images/pbox/img_bg.png); width: 100%; top:30px; left:30px; height: 100%; padding:0; }
+.err_mess { position:absolute; bottom:20px; color:white; padding:0; margin:0 0 0 20px; display:block; }
+.err_mess a { color:red; font-weight:700; }
+.number { position:absolute; margin-left:3px; height:18px; width:30px; padding:3px; left:0; color:#666; bottom:1px; font-size:11px; }
+a.link_to { position:absolute; margin-right:6px; height:20px; width:20px; right:0; color:#999; bottom:3px; background:url(../images/pbox/link_out.png) no-repeat; text-indent:-999em; }
+a:hover.link_to { background:url(../images/pbox/link_out_h.png) no-repeat; }
+a.play { position:absolute; top:20px!important; top:20px; left:20px!important; left:20px; width:40px; height:40px; margin:0; outline:none; display:block; background:url(../images/pbox/play.png) no-repeat; text-indent:-999em; border:none; cursor:pointer; }
+a:hover.play { background:url(../images/pbox/play_h.png) no-repeat; }
+a.stop { position:absolute; top:20px!important; top:20px; left:20px!important; left:20px; ; width:40px; height:40px; margin:0; outline:none; display:block; background:url(../images/pbox/pause.png) no-repeat; text-indent:-999em; border:none; cursor:pointer; }
+a:hover.stop { background:url(../images/pbox/pause_h.png) no-repeat; }
+.pirobox_gall:hover { cursor: crosshair; }
+/* Slide Show Product Tour */
+
+#slideshow { position:relative; height:200px; text-align:center; }
+#slideshow IMG { position:absolute; top:0; left:12px; z-index:8; opacity:0.0; display:block; }
+#slideshow IMG.active { z-index:10; opacity:1.0; }
+#slideshow IMG.last-active { z-index:9; }

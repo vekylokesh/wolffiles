@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: Wolframhart Associates - Admin Control Panel</title>
+<link href="css/style_admin.css" rel="stylesheet" type="text/css" />
+<link href="css/js_effect.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+<script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish({
+    dualColumn  : 20, //if a submenu has at least this many items it will be divided in 2 columns
+    tripleColumn  : 50, //if a submenu has at least this many items it will be divided in 3 columns
+    hoverClass  : 'sfHover',
+    delay    : 500, //make sure menus only disappear when intended, 500ms is advised by Jacob Nielsen
+    animationShow  : {height:'show',opacity:'show'},
+    speedShow    : 350,
+    easingShow      : 'easeOutTurbo',
+    animationHide  : {height:'hide',opacity:'hide'},
+    speedHide    : 300,
+    easingHide      : 'easeInTurbo',
+    autoArrows  : false
+      });
+    });
+    </script>
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body onload="MM_preloadImages('images/bttn_logout_hov.gif','images/bttn_suspend_hov.png','images/bttn_edit_hov.png','images/bttn_delete_hov.png')">
+<center>
+  <div class="main_wrapper">
+    <div class="in_wrapper">
+      <div class="foot_wrapper">
+        <table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td valign="top" class="logo_pad"><table width="100%" border="0" cellspacing="0" cellpadding="0" >
+                            <tr>
+                              <td width="19%" align="left"><a href="index.html"><img src="images/logo.png" alt="" width="167" height="72" border="0" /></a></td>
+                              <td width="81%" align="right" class="admin_title">&nbsp;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td class="admin_bdr"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td width="10" align="left" valign="top"><img src="images/topnav_left.gif" alt="" width="10" height="39" /></td>
+                              <td width="980" class="topnav_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="91%"><ul class="sf-menu" id="nav">
+                                        <li class="first"> <a href="index.html"><span>Dashboard</span></a></li>
+                                        <li> <a href="search_option.html"><span>Search Management</span></a>
+                                          <ul>
+                                            <li> <a href="search_option.html">Main Search Options</a></li>
+                                            <li> <a href="add_new_job.html">Add New Job</a></li>
+                                            <li> <a href="view_job_list.html">View Jobs List</a></li>
+                                          </ul>
+                                        </li>
+                                        <li> <a href="add_content_page.html"><span>Content Management</span></a>
+                                          <ul>
+                                            <li> <a href="add_content_page.html">Add Content Page</a></li>
+                                            <li> <a href="view_content_page.html">View Content Pages</a></li>
+                                            <li> <a href="view_latest_job.html">Manage Latest Jobs</a></li>
+                                          </ul>
+                                        </li>
+                                        <li><a href="news_events.html"><span>Other Management</span></a>
+                                          <ul>
+                                            <li> <a href="news_events.html">News &amp; Events</a></li>
+                                          </ul>
+                                        </li>
+                                        <li class="last"> <a href="#"><span>Settings</span></a>
+                                          <ul>
+                                            <li> <a href="ch_password.html">Change Password</a></li>
+                                          </ul>
+                                        </li>
+                                      </ul></td>
+                                    <td width="9%" align="right"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('logout','','images/bttn_logout_hov.gif',1)"><img src="images/bttn_logout.gif" alt="Log Out" name="logout" width="77" height="22" border="0" id="logout" /></a></td>
+                                  </tr>
+                                </table></td>
+                              <td width="10" align="right" valign="top"><img src="images/topnav_right.gif" alt="" width="10" height="39" /></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td class="admin_bdr"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="admin_body"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="list_box">
+                                  <tr>
+                                    <td align="left" class="body_title">View Latest Job List</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="body_content"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td align="left" class="list_title">S.No</td>
+                                        <td width="21%" align="left" class="list_title">Job Title</td>
+                                        <td width="46%" align="left" class="list_title">Description</td>
+                                        <td width="17%" align="left" class="list_title"> Date &amp; Time of Post</td>
+                                        <td width="11%" align="center" class="list_title">Actions</td>
+                                      </tr>
+                                      <tr class="list_row1">
+                                        <td align="left">1</td>
+                                        <td align="left">Assistant Vice President - Financial Accounting </td>
+                                        <td align="left">Our client is a strong name in the banking industry. Due recent promotions they are currently seeking a experience individual to join their team ... </td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image821','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image821" width="20" height="20" border="0" id="Image821" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image921','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image921" width="20" height="20" border="0" id="Image921" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete611','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete611" width="20" height="20" border="0" id="delete611" /></a></td>
+                                      </tr>
+                                      <tr class="list_row2">
+                                        <td align="left">2</td>
+                                        <td align="left">Regional Financial Controller</td>
+                                        <td align="left">Our Client is one of the top names in the commodity market. Due to expansion they are looking for a dynamic individual to join their team ...</td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image621','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image621" width="20" height="20" border="0" id="Image621" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image721','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image721" width="20" height="20" border="0" id="Image721" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete521','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete521" width="20" height="20" border="0" id="delete521" /></a></td>
+                                      </tr>
+                                      <tr class="list_row1">
+                                        <td align="left">3</td>
+                                        <td align="left">Assistant Vice President - Financial Accounting </td>
+                                        <td align="left">Our client is a strong name in the banking industry. Due recent promotions they are currently seeking a experience individual to join their team ... </td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4362','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image4362" width="20" height="20" border="0" id="Image5" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1162','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image1162" width="20" height="20" border="0" id="Image1162" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete3162','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete3162" width="20" height="20" border="0" id="delete4" /></a></td>
+                                      </tr>
+                                      <tr class="list_row2">
+                                        <td align="left">4</td>
+                                        <td align="left">Regional Financial Controller</td>
+                                        <td align="left">Our Client is one of the top names in the commodity market. Due to expansion they are looking for a dynamic individual to join their team ...</td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2362','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image2362" width="20" height="20" border="0" id="Image4" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image172','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image172" width="20" height="20" border="0" id="Image172" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete211162','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete211162" width="20" height="20" border="0" id="delete3" /></a></td>
+                                      </tr>
+                                      <tr class="list_row1">
+                                        <td align="left">5</td>
+                                        <td align="left">Senior Finance Manager</td>
+                                        <td align="left">Our Client is one of the top names in the industry. They are looking for a Senior Finance Manager to join their team due to a recent promotion. Directly reporting to the Head of Finance you will be ...</td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4361','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image4361" width="20" height="20" border="0" id="Image3" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1161','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image1161" width="20" height="20" border="0" id="Image1161" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete3161','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete3161" width="20" height="20" border="0" id="delete2" /></a></td>
+                                      </tr>
+                                      
+                                      <tr class="list_row2">
+                                        <td width="5%" align="left">6</td>
+                                        <td align="left">Regional Financial Controller</td>
+                                        <td align="left">Our Client is one of the top names in the commodity market. Due to expansion they are looking for a dynamic individual to join their team ...</td>
+                                        <td align="left">15-12-12, 05:02:23 PM</td>
+                                        <td align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6211','','images/bttn_suspend_hov.png',1)" title="Suspend"><img src="images/bttn_suspend.png" alt="Suspend" name="Image6211" width="20" height="20" border="0" id="Image6211" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7211','','images/bttn_edit_hov.png',1)" title="Edit"><img src="images/bttn_edit.png" alt="Edit" name="Image7211" width="20" height="20" border="0" id="Image7211" /></a> &nbsp; <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('delete5211','','images/bttn_delete_hov.png',1)" title="Delete"><img src="images/bttn_delete.png" alt="Delete" name="delete5211" width="20" height="20" border="0" id="delete5211" /></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="5" align="left" class="pagination"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                              <td width="37%" align="left">Record(s) 1 - 6</td>
+                                              <td width="63%" align="right"><b>1</b></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center" class="footer_bg"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="footer"><span>Copyright &copy; 2012 Wolframhart Associates. All Rights Reserved.</span></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</center>
+</body>
+</html>

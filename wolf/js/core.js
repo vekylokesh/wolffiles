@@ -1,0 +1,13 @@
+$(document).ready(function(){
+		$('#buttonSubmit').bind('click',function(){
+				$.ajax({
+					   url:'index.html?jobTitle='+$('#jobTitle').val(),
+					   dataType:'json',
+					   method:'POST'
+					}).done(function(response){
+						alert('sent');
+					}).error(function(){
+						alert('error');
+						});							 													 
+			});				   
+	});
